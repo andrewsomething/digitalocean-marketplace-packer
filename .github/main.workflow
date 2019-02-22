@@ -6,4 +6,5 @@ workflow "New workflow" {
 action "packer validate" {
   uses = "docker://hashicorp/packer"
   args = "validate marketplace-image.json"
+  secrets = ["DIGITALOCEAN_TOKEN"]
 }
